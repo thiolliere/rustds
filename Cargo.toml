@@ -1,0 +1,15 @@
+[package]
+name = "rustds"
+version = "0.1.0"
+authors = ["thiolliere <gui.thiolliere@gmail.com>"]
+
+[dependencies]
+serde_derive = "1.0"
+serde = "1.0"
+serde_ini = "*"
+regex = "1"
+rand = "0.5"
+tempfile = "3"
+lmms-drum-synth-sys = { path = "lmms-drum-synth-sys" }
+failure = "0.1"
+byteorder = "1"

@@ -1,0 +1,10 @@
+[package]
+name = "lmms-drum-synth-sys"
+version = "0.1.0"
+authors = ["thiolliere <gui.thiolliere@gmail.com>"]
+
+[dependencies]
+
+[build-dependencies]
+cc = "1.0"
+bindgen = "0.26"

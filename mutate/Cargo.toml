@@ -1,0 +1,8 @@
+[package]
+name = "mutate"
+version = "0.1.0"
+authors = ["thiolliere <gui.thiolliere@gmail.com>"]
+
+[dependencies]
+rand = "0.5"
+noisy_float = "0.1"

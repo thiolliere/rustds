@@ -1,0 +1,16 @@
+[package]
+name = "rds"
+version = "0.1.0"
+authors = ["thiolliere <gui.thiolliere@gmail.com>"]
+
+[dependencies]
+serde_derive = "1.0"
+serde = "1.0"
+serde_ini = "*"
+regex = "1"
+lmms-drum-synth-sys = { path = "../lmms-drum-synth-sys" }
+tempfile = "3"
+failure = "0.1"
+mutate = { path = "../mutate" }
+mutate-derive = { path = "../mutate-derive" }
+rand = "0.5"

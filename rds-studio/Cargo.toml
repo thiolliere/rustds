@@ -1,0 +1,11 @@
+[package]
+name = "rds-studio"
+version = "0.1.0"
+authors = ["thiolliere <gui.thiolliere@gmail.com>"]
+
+[dependencies]
+rds = { path = "../rds" }
+
+[dependencies.gtk]
+version = "0.4.0"
+features = ["v3_10"]

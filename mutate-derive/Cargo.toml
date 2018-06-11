@@ -1,0 +1,16 @@
+[package]
+name = "mutate-derive"
+version = "0.1.0"
+authors = ["thiolliere <gui.thiolliere@gmail.com>"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "0.14"
+quote = "0.6"
+mutate = { path = "../mutate" }
+proc-macro2 = "0.4"
+
+[dev-dependencies]
+rand = "0.5"

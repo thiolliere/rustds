@@ -141,19 +141,19 @@ fn default_50i32() -> i32 {
 #[derive(Serialize, Deserialize, CompositeMutate)]
 #[allow(non_snake_case)]
 pub struct DrumSynth {
-    General: General,
+    pub General: General,
     #[serde(default = "default_deserialize_nothing")]
-    Tone: Tone,
+    pub Tone: Tone,
     #[serde(default = "default_deserialize_nothing")]
-    Noise: Noise,
+    pub Noise: Noise,
     #[serde(default = "default_deserialize_nothing")]
-    Overtones: Overtones,
+    pub Overtones: Overtones,
     #[serde(default = "default_deserialize_nothing")]
-    NoiseBand: NoiseBand,
+    pub NoiseBand: NoiseBand,
     #[serde(default = "default_deserialize_nothing")]
-    NoiseBand2: NoiseBand,
+    pub NoiseBand2: NoiseBand,
     #[serde(default = "default_deserialize_nothing")]
-    Distortion: Distortion,
+    pub Distortion: Distortion,
 }
 
 #[derive(Serialize, Deserialize, CompositeMutate)]

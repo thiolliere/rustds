@@ -608,6 +608,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "rds"
 version = "0.1.0"
 dependencies = [
+ "clap 2.31.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "failure 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "lmms-drum-synth-sys 0.1.0",
  "mutate 0.1.0",
@@ -624,6 +625,7 @@ dependencies = [
 name = "rds-studio"
 version = "0.1.0"
 dependencies = [
+ "gio 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "gtk 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "rds 0.1.0",
 ]

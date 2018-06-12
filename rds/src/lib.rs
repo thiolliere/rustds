@@ -82,6 +82,24 @@ where
     serde_ini::from_str("").unwrap()
 }
 
+// fn deserialize_enum_from_int<'de, D, T>(deserializer: D) -> Result<T, D::Error>
+// where
+//     D: Deserializer<'de>,
+//     T: From<i32>,
+// {
+//     let n: i32 = Deserialize::deserialize(deserializer)?;
+//     Ok(n.into())
+// }
+
+// fn serialize_enum_to_dsint<S, T>(v: &T, serializer: S) -> Result<S::Ok, S::Error>
+// where
+//     S: Serializer,
+//     T: Into<i32> + Copy,
+// {
+//     let n: i32 = (*v).into();
+//     serializer.serialize_i32(n)
+// }
+
 fn deserialize_bool_from_int<'de, D>(deserializer: D) -> Result<bool, D::Error>
 where
     D: Deserializer<'de>
@@ -219,6 +237,41 @@ pub struct Noise {
     pub Envelope: Envelope,
 }
 
+// #[repr(i32)]
+// #[derive(Clone, Copy, EnumMutate)]
+// pub enum WaveForm {
+//     Sine,
+//     Sine2,
+//     Tri,
+//     Saw,
+//     Square,
+// }
+
+// impl From<i32> for WaveForm {
+//     fn from(v: i32) -> Self {
+//         match v {
+//             0 => WaveForm::Sine,
+//             1 => WaveForm::Sine2,
+//             2 => WaveForm::Tri,
+//             3 => WaveForm::Saw,
+//             4 => WaveForm::Square,
+//             _ => panic!("invalid waveform value"),
+//         }
+//     }
+// }
+
+// impl Into<i32> for WaveForm {
+//     fn into(self) -> i32 {
+//         match self {
+//             WaveForm::Sine => 0,
+//             WaveForm::Sine2 => 1,
+//             WaveForm::Tri => 2,
+//             WaveForm::Saw => 3,
+//             WaveForm::Square => 4,
+//         }
+//     }
+// }
+
 #[derive(Serialize, Deserialize, CompositeMutate)]
 #[allow(non_snake_case)]
 pub struct Overtones {
@@ -231,19 +284,23 @@ pub struct Overtones {
     #[serde(default = "default_200f32")]
     pub F1: f32,
     #[serde(default)]
-    pub Wave1: i32,
+    pub Wave1: i32, //TODO: WaveForm::sine, sine^2, tri, saw, square
     #[serde(default)]
-    pub Track1: i32,
+    #[serde(deserialize_with = "deserialize_bool_from_int")]
+    #[serde(serialize_with = "serialize_bool_to_dsint")]
+    pub Track1: bool,
     #[serde(default = "default_120f32")]
     pub F2: f32,
     #[serde(default)]
-    pub Wave2: i32,
+    pub Wave2: i32, // TODO: idem wave1
     #[serde(default)]
-    pub Track2: i32,
+    #[serde(deserialize_with = "deserialize_bool_from_int")]
+    #[serde(serialize_with = "serialize_bool_to_dsint")]
+    pub Track2: bool,
     #[serde(default)]
     pub Filter: i32,
     #[serde(default = "default_2i32")]
-    pub Method: i32,
+    pub Method: i32, // TODO: OvertonesMode: add,FM,RM,808 Cymbal
     #[serde(default = "default_50i32")]
     pub Param: i32,
     #[serde(deserialize_with = "deserialize_envelope_from_str")]
@@ -287,7 +344,7 @@ pub struct Distortion {
     #[serde(default)]
     pub Bits: i32,
     #[serde(default)]
-    pub Rate: i32,
+    pub Rate: i32, // TODO: value are 1, 2, 3, 4, 8, 10, 20, n
 }
 
 impl DrumSynth {

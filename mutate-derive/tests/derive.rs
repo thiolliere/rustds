@@ -12,3 +12,11 @@ pub struct B {
     a: f32,
     b: f32,
 }
+
+#[repr(usize)]
+#[derive(EnumMutate)]
+pub enum C {
+    A,
+    B,
+    C,
+}

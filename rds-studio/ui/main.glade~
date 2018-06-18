@@ -2,65 +2,185 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkAdjustment" id="distortion_bits">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="distortion_clipping">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="distortion_rate">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="general_filter_high_pass">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="general_filter_level">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <object class="GtkAdjustment" id="general_level">
-    <property name="lower">-1000</property>
-    <property name="upper">1000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="general_resonance">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="general_semitones_transpose">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="general_time_stretch">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="noise_band_1_freq">
+    <property name="lower">-100000</property>
     <property name="upper">100000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="noise_band_1_level">
-    <property name="lower">-1000</property>
-    <property name="upper">1000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="noise_band_1_width">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="noise_band_2_freq">
+    <property name="lower">-100000</property>
     <property name="upper">100000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="noise_band_2_level">
-    <property name="lower">-1000</property>
-    <property name="upper">1000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="noise_band_2_width">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="noise_level">
-    <property name="lower">-1000</property>
-    <property name="upper">1000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
-  </object>
-  <object class="GtkAdjustment" id="overtones_A_freq">
+    <property name="lower">-100000</property>
     <property name="upper">100000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
-  <object class="GtkAdjustment" id="overtones_B_freq">
+  <object class="GtkAdjustment" id="noise_slope">
+    <property name="lower">-100000</property>
     <property name="upper">100000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_a_freq">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_a_mode">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_b_freq">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_b_mode">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_filter">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="overtones_level">
-    <property name="lower">-1000</property>
-    <property name="upper">1000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_method">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="overtones_param">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="tone_droop">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="tone_f1">
+    <property name="lower">-100000</property>
     <property name="upper">100000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="tone_f2">
+    <property name="lower">-100000</property>
     <property name="upper">100000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="tone_level">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="tone_phase">
+    <property name="lower">-100000</property>
+    <property name="upper">100000</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkApplicationWindow" id="window">
     <property name="can_focus">False</property>
@@ -179,15 +299,6 @@
                         <property name="use_stock">True</property>
                       </object>
                     </child>
-                    <child>
-                      <object class="GtkImageMenuItem">
-                        <property name="label">gtk-jump-to</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
                   </object>
                 </child>
               </object>
@@ -249,7 +360,7 @@
                 <property name="can_focus">False</property>
                 <property name="spacing">10</property>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="play">
                     <property name="label" translatable="yes">Play</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -332,6 +443,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_level</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -367,6 +479,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_slope</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -463,6 +576,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_band_1_level</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -498,6 +612,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_band_1_freq</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -533,6 +649,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_band_1_width</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -570,7 +687,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkSwitch">
+                              <object class="GtkSwitch" id="noise_band_1_on">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                               </object>
@@ -629,6 +746,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_band_2_level</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -664,6 +782,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_band_2_freq</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -699,6 +819,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">noise_band_2_width</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -736,7 +857,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkSwitch">
+                              <object class="GtkSwitch" id="noise_band_2_on">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                               </object>
@@ -808,6 +929,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">tone_level</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -851,6 +973,7 @@
                                             <property name="text" translatable="yes">0</property>
                                             <property name="placeholder_text" translatable="yes">max</property>
                                             <property name="adjustment">tone_f1</property>
+                                            <property name="digits">2</property>
                                             <property name="update_policy">if-valid</property>
                                           </object>
                                           <packing>
@@ -878,6 +1001,7 @@
                                             <property name="text" translatable="yes">0</property>
                                             <property name="placeholder_text" translatable="yes">max</property>
                                             <property name="adjustment">tone_f2</property>
+                                            <property name="digits">2</property>
                                             <property name="update_policy">if-valid</property>
                                           </object>
                                           <packing>
@@ -921,6 +1045,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">tone_droop</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -956,6 +1082,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">tone_phase</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -993,7 +1121,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkSwitch">
+                              <object class="GtkSwitch" id="tone_on">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                               </object>
@@ -1052,6 +1180,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_level</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1123,6 +1252,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_a_mode</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1146,6 +1276,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_a_freq</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1216,6 +1348,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_b_mode</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1239,6 +1372,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_b_freq</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1273,6 +1408,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_filter</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1308,6 +1444,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_method</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1343,6 +1480,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">overtones_param</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1380,7 +1518,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkSwitch">
+                              <object class="GtkSwitch" id="overtones_on">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                               </object>
@@ -1452,6 +1590,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">distortion_clipping</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1487,6 +1626,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">distortion_bits</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1522,6 +1662,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">distortion_rate</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1559,7 +1700,7 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkSwitch">
+                              <object class="GtkSwitch" id="distortion_on">
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                               </object>
@@ -1618,6 +1759,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">general_filter_level</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1653,6 +1795,7 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">general_filter_high_pass</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1676,7 +1819,7 @@
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">Filter overtones only :</property>
+                                        <property name="label" translatable="yes">Resonance :</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1688,6 +1831,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">general_resonance</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1723,6 +1868,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">general_level</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1758,6 +1905,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">general_time_stretch</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1793,6 +1942,8 @@
                                       <object class="GtkSpinButton">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
+                                        <property name="adjustment">general_semitones_transpose</property>
+                                        <property name="digits">2</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1813,33 +1964,10 @@
                           </object>
                         </child>
                         <child type="label">
-                          <object class="GtkBox">
+                          <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="spacing">10</property>
-                            <child>
-                              <object class="GtkLabel">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">General</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
+                            <property name="label" translatable="yes">General</property>
                           </object>
                         </child>
                       </object>
@@ -1872,11 +2000,5 @@
         </child>
       </object>
     </child>
-  </object>
-  <object class="GtkAdjustment" id="tone_level">
-    <property name="lower">-1000</property>
-    <property name="upper">1000</property>
-    <property name="step_increment">10</property>
-    <property name="page_increment">1</property>
   </object>
 </interface>

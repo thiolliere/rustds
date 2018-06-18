@@ -21,7 +21,7 @@ use std::io::Read;
 
 pub type Envelope = Vec<Point>;
 
-#[derive(CompositeMutate)]
+#[derive(CompositeMutate, Clone)]
 pub struct Point {
     time_level: i32,
     value: i32,
@@ -156,8 +156,9 @@ fn default_50i32() -> i32 {
     50
 }
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct DrumSynth {
     pub General: General,
     #[serde(default = "default_deserialize_nothing")]
@@ -174,8 +175,9 @@ pub struct DrumSynth {
     pub Distortion: Distortion,
 }
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct General {
     #[mutate(skip)]
     pub Version: String,
@@ -187,6 +189,10 @@ pub struct General {
     #[serde(default = "default_100f32")]
     pub Stretch: f32,
     #[serde(default)]
+    pub Level: f32,
+    #[serde(default)]
+    pub Resonance: f32,
+    #[serde(default)]
     pub Filter: i32,
     #[serde(default)]
     pub HighPass: i32,
@@ -196,8 +202,9 @@ pub struct General {
     pub FilterEnv: Envelope,
 }
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct Tone {
     #[serde(deserialize_with = "deserialize_bool_from_int")]
     #[serde(serialize_with = "serialize_bool_to_dsint")]
@@ -220,8 +227,9 @@ pub struct Tone {
 }
 
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct Noise {
     #[serde(deserialize_with = "deserialize_bool_from_int")]
     #[serde(serialize_with = "serialize_bool_to_dsint")]
@@ -235,6 +243,11 @@ pub struct Noise {
     #[serde(serialize_with = "serialize_envelope_to_str")]
     #[serde(default = "default_0_0_100_0")]
     pub Envelope: Envelope,
+    /// FIXME: This option is not used by lmms-drum-synth
+    #[serde(deserialize_with = "deserialize_bool_from_int")]
+    #[serde(serialize_with = "serialize_bool_to_dsint")]
+    #[serde(default)]
+    pub FixedSeq: bool,
 }
 
 // #[repr(i32)]
@@ -272,8 +285,9 @@ pub struct Noise {
 //     }
 // }
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct Overtones {
     #[serde(deserialize_with = "deserialize_bool_from_int")]
     #[serde(serialize_with = "serialize_bool_to_dsint")]
@@ -313,8 +327,9 @@ pub struct Overtones {
     pub Envelope2: Envelope,
 }
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct NoiseBand {
     #[serde(deserialize_with = "deserialize_bool_from_int")]
     #[serde(serialize_with = "serialize_bool_to_dsint")]
@@ -332,8 +347,9 @@ pub struct NoiseBand {
     pub Envelope: Envelope,
 }
 
-#[derive(Serialize, Deserialize, CompositeMutate)]
+#[derive(Serialize, Deserialize, CompositeMutate, Clone)]
 #[allow(non_snake_case)]
+#[serde(deny_unknown_fields)]
 pub struct Distortion {
     #[serde(deserialize_with = "deserialize_bool_from_int")]
     #[serde(serialize_with = "serialize_bool_to_dsint")]

@@ -1,5 +1,7 @@
 # Rustds
 
+experiment on reimplementing drum_synth in rust and GTK
+
 ## License
 
 Licensed under either of
